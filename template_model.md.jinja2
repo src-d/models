@@ -1,0 +1,23 @@
+# {{ uuid }}
+
+{{ details.description }}
+
+{% for ref in details.references %}
+* [{{ ref[0] }}]({{ ref[1] }})
+{% endfor %}
+
+Uploaded: {{ details.created_at }}
+
+Version: {{ details.version | join(".") }}
+
+File: {{ details.url }}
+
+License: [{{ details.license[0] }}]({{ details.license[1] }})
+
+{% if details.dependencies %}
+Dependencies:
+
+    {% for dep in details.dependencies %}
+* [{{ dep }}]({{ links[dep] }})
+    {% endfor %}
+{% endif %}

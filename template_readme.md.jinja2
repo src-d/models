@@ -1,0 +1,15 @@
+source{d} MLoSC models
+======================
+{% for name, items in models.items() %}
+{{ "" }}
+## {{ name }}
+{{ items.description }}
+
+{{ items | length - 2 }} model{{ "s" if items | length > 3 }}:
+
+    {% for key, item in items.items() | sort %}
+        {% if key not in ["default", "description"] %}
+* {{ "<default>" if key == items["default"] }} [{{ key }}]({{ links[key] }}) {{ " → [%s](%s)" % (item["parent"], links[item["parent"]]) if item["parent"] }}
+        {% endif %}
+    {% endfor %}
+{% endfor %}
