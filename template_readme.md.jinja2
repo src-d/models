@@ -1,6 +1,6 @@
 source{d} MLoSC models
 ======================
-{% for name, items in models.items() %}
+{% for name, items in models.items() | sort %}
 {{ "" }}
 ## {{ name }}
 {{ items.description }}
