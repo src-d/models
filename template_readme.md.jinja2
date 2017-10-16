@@ -5,10 +5,16 @@ source{d} MLoSC models
 ## {{ name }}
 {{ items.description }}
 
-{{ items | length - 2 }} model{{ "s" if items | length > 3 }}:
+Example:
+
+```
+{{ items.code % "" }}
+```
+
+{{ items | length - (metakeys | length) }} model{{ "s" if items | length > (metakeys | length + 1) }}:
 
     {% for key, item in items.items() | sort %}
-        {% if key not in ["default", "description"] %}
+        {% if key not in metakeys %}
 * {{ "<default>" if key == items["default"] }} [{{ key }}]({{ links[key] }}) {{ " → [%s](%s)" % (item["parent"], links[item["parent"]]) if item["parent"] }}
         {% endif %}
     {% endfor %}

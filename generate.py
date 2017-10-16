@@ -5,10 +5,12 @@ import os
 import sys
 from time import time
 
-from jinja2 import Template, Environment
+import humanize
+from jinja2 import Template
+import requests
 
 log = logging.getLogger("generate")
-BLACKLISTED_KEYS = {"default", "description"}
+BLACKLISTED_KEYS = {"default", "description", "code"}
 
 
 def generate(index, output, template_readme, readme_ext, template_model, model_ext):
@@ -24,17 +26,22 @@ def generate(index, output, template_readme, readme_ext, template_model, model_e
     os.makedirs(output, exist_ok=True)
     readme = os.path.join(output, "README." + readme_ext)
     with open(readme, "w") as fout:
-        fout.write(template_readme.render(models=models, links=links))
+        fout.write(template_readme.render(models=models, links=links, metakeys=BLACKLISTED_KEYS))
     log.info("Generated %s", readme)
     for name, items in models.items():
+        code = items["code"]
         mdir = os.path.join(output, name)
         os.makedirs(mdir, exist_ok=True)
         for key, val in items.items():
             if key in BLACKLISTED_KEYS:
                 continue
             model = os.path.join(mdir, key + "." + model_ext)
+            response = requests.get(val["url"], stream=True)
+            size = humanize.naturalsize(int(response.headers["Content-Length"]))
             with open(model, "w") as fout:
-                fout.write(template_model.render(uuid=key, details=val, links=links))
+                fout.write(template_model.render(
+                    name=name, uuid=key, details=val, links=links, code=code,
+                    size=size))
             log.info("Generated %s", model)
 
 
