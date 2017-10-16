@@ -20,7 +20,7 @@ def generate(index, output, template_readme, readme_ext, template_model, model_e
         for key in items:
             if key in BLACKLISTED_KEYS:
                 continue
-            links[key] = os.path.join(name, "%s.%s" % (key, model_ext))
+            links[key] = os.path.join("/", name, "%s.%s" % (key, model_ext))
     os.makedirs(output, exist_ok=True)
     readme = os.path.join(output, "README." + readme_ext)
     with open(readme, "w") as fout:
