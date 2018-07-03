@@ -32,6 +32,21 @@ print("Number of tokens:", len(df))
 
 * <default> [f64bacd4-67fb-4c64-8382-399a8e7db52a](/docfreq/f64bacd4-67fb-4c64-8382-399a8e7db52a.md)
 
+## id2vec
+Source code identifier embeddings, that is, every identifier is represented by a dense vector.
+
+Example:
+
+```
+from sourced.ml.models import Id2Vec
+id2vec = Id2Vec().load(id2vec)
+print("Number of tokens:", len(id2vec))
+```
+
+1 model:
+
+* <default> [92609e70-f79c-46b5-8419-55726e873cfc](/id2vec/92609e70-f79c-46b5-8419-55726e873cfc.md)
+
 ## topics
 Topic modeling of Git repositories. All tokens are identifiers extracted from repositories and seen as indicators for topics. They are used to infer the topic(s) of repositories.
 
