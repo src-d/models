@@ -1,6 +1,22 @@
 source{d} MLonCode models
 =========================
 
+## bow
+Weighted bag-of-words, that is, every bag is a feature extracted from source code and associated with a weight obtained by applying TFIDF.
+
+Example:
+
+```
+from sourced.ml.models import BOW
+bow = BOW().load(bow)
+print("Number of documents:", len(bow))
+print("Number of tokens:", len(bow.tokens))
+```
+
+1 model:
+
+* <default> [1e3da42a-28b6-4b33-94a2-a5671f4102f4](/bow/1e3da42a-28b6-4b33-94a2-a5671f4102f4.md)
+
 ## docfreq
 Document frequencies of features extracted from source code, that is, how many documents (repositories, files or functions) contain each tokenized feature.
 
