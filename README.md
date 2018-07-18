@@ -28,8 +28,9 @@ df = DocumentFrequencies().load(docfreq)
 print("Number of tokens:", len(df))
 ```
 
-1 model:
+2 models:
 
+*  [55215392-36fc-43e5-b277-500f5b68d0c6](/docfreq/55215392-36fc-43e5-b277-500f5b68d0c6.md)
 * <default> [f64bacd4-67fb-4c64-8382-399a8e7db52a](/docfreq/f64bacd4-67fb-4c64-8382-399a8e7db52a.md)
 
 ## id2vec
