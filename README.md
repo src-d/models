@@ -13,9 +13,10 @@ print("Number of documents:", len(bow))
 print("Number of tokens:", len(bow.tokens))
 ```
 
-1 model:
+2 models:
 
 * <default> [1e3da42a-28b6-4b33-94a2-a5671f4102f4](/bow/1e3da42a-28b6-4b33-94a2-a5671f4102f4.md)
+*  [da8c5dee-b285-4d55-8913-a5209f716564](/bow/da8c5dee-b285-4d55-8913-a5209f716564.md)
 
 ## docfreq
 Document frequencies of features extracted from source code, that is, how many documents (repositories, files or functions) contain each tokenized feature.
