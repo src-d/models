@@ -43,8 +43,9 @@ id2vec = Id2Vec().load(id2vec)
 print("Number of tokens:", len(id2vec))
 ```
 
-1 model:
+2 models:
 
+*  [3467e9ca-ec11-444a-ba27-9fa55f5ee6c1](/id2vec/3467e9ca-ec11-444a-ba27-9fa55f5ee6c1.md)
 * <default> [92609e70-f79c-46b5-8419-55726e873cfc](/id2vec/92609e70-f79c-46b5-8419-55726e873cfc.md)
 
 ## topics
