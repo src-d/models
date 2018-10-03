@@ -13,8 +13,12 @@ print("Number of documents:", len(bow))
 print("Number of tokens:", len(bow.tokens))
 ```
 
-1 model:
+4 models:
 
+*  [1e0deee4-7dc1-400f-acb6-74c0f4aec471](/bow/1e0deee4-7dc1-400f-acb6-74c0f4aec471.md)
+* <default> [1e3da42a-28b6-4b33-94a2-a5671f4102f4](/bow/1e3da42a-28b6-4b33-94a2-a5671f4102f4.md)
+*  [694c20a0-9b96-4444-80ae-f2fa5bd1395b](/bow/694c20a0-9b96-4444-80ae-f2fa5bd1395b.md)
+*  [da8c5dee-b285-4d55-8913-a5209f716564](/bow/da8c5dee-b285-4d55-8913-a5209f716564.md)
 *  [1e3da42a-28b6-4b33-94a2-a5671f4102f4](bow/1e3da42a-28b6-4b33-94a2-a5671f4102f4.md)
 
 ## docfreq
@@ -29,9 +33,10 @@ df = DocumentFrequencies().load(docfreq)
 print("Number of tokens:", len(df))
 ```
 
-1 model:
+2 models:
 
-*  [f64bacd4-67fb-4c64-8382-399a8e7db52a](docfreq/f64bacd4-67fb-4c64-8382-399a8e7db52a.md)
+*  [55215392-36fc-43e5-b277-500f5b68d0c6](/docfreq/55215392-36fc-43e5-b277-500f5b68d0c6.md)
+* <default> [f64bacd4-67fb-4c64-8382-399a8e7db52a](/docfreq/f64bacd4-67fb-4c64-8382-399a8e7db52a.md)
 
 ## id2vec
 
@@ -48,7 +53,7 @@ print("Number of tokens:", len(id2vec))
 2 models:
 
 * [3467e9ca-ec11-444a-ba27-9fa55f5ee6c1](id2vec/3467e9ca-ec11-444a-ba27-9fa55f5ee6c1.md)
-*  [92609e70-f79c-46b5-8419-55726e873cfc](id2vec/92609e70-f79c-46b5-8419-55726e873cfc.md)
+* [92609e70-f79c-46b5-8419-55726e873cfc](id2vec/92609e70-f79c-46b5-8419-55726e873cfc.md)
 
 ## topics
 
