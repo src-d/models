@@ -67,18 +67,3 @@ print("Number of tokens:", len(topics.tokens))
 1 model:
 
 * <default> [c70a7514-9257-4b33-b468-27a8588d4dfa](/topics/c70a7514-9257-4b33-b468-27a8588d4dfa.md)
-
-## typos_correction
-Model that suggests fixes to correct typos.
-
-Example:
-
-```python
-from lookout.style.typos.corrector import TyposCorrector
-corrector = TyposCorrector().load(typos_correction)
-print("Corrector configuration:\n", corrector.dump())
-```
-
-1 model:
-
-* <default> [d798e898-c6b2-4e39-809f-f502571584e8](/typos_correction/d798e898-c6b2-4e39-809f-f502571584e8.md)
