@@ -81,4 +81,4 @@ print("Corrector configuration:\n", corrector.dump())
 
 1 model:
 
-* <default> [d798e898-c6b2-4e39-809f-f502571584e8](/typos_correction/d798e898-c6b2-4e39-809f-f502571584e8.md)
+* <default> [245fae3a-2f87-4990-ab9a-c463393cfe51](/typos_correction/245fae3a-2f87-4990-ab9a-c463393cfe51.md)
