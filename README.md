@@ -52,6 +52,23 @@ print("Number of tokens:", len(id2vec))
 *  [3467e9ca-ec11-444a-ba27-9fa55f5ee6c1](/id2vec/3467e9ca-ec11-444a-ba27-9fa55f5ee6c1.md)
 * <default> [92609e70-f79c-46b5-8419-55726e873cfc](/id2vec/92609e70-f79c-46b5-8419-55726e873cfc.md)
 
+## id_splitter_nn
+
+Model that contains source code identifier splitter BiLSTM weights.
+
+Example:
+
+```python
+from sourced.ml.models.id_splitter import IdentifierSplitterNN
+import modelforge.backends
+id_splitter = IdentifierSplitterNN().load("522bdd11-d1fa-49dd-9e51-87c529283418", backend=modelforge.backends.create_backend())
+id_splitter.split(identifiers)
+```
+
+1 model:
+
+- <default> [522bdd11-d1fa-49dd-9e51-87c529283418](/id_splitter_nn/522bdd11-d1fa-49dd-9e51-87c529283418.md)
+
 ## topics
 Topic modeling of Git repositories. All tokens are identifiers extracted from repositories and seen as indicators for topics. They are used to infer the topic(s) of repositories.
 
