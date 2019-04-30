@@ -54,7 +54,7 @@ print("Number of tokens:", len(id2vec))
 
 ## id_splitter_nn
 
-Model that contains source code identifier splitter BiLSTM weights.
+Weights of the BiLSTM network to split source code identifiers.
 
 Example:
 
