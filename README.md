@@ -53,20 +53,19 @@ print("Number of tokens:", len(id2vec))
 * <default> [92609e70-f79c-46b5-8419-55726e873cfc](/id2vec/92609e70-f79c-46b5-8419-55726e873cfc.md)
 
 ## id_splitter_nn
-
-Weights of the BiLSTM network to split source code identifiers.
+Model that contains source code identifier splitter BiLSTM weights.
 
 Example:
 
 ```python
 from sourced.ml.models.id_splitter import IdentifierSplitterNN
-id_splitter = IdentifierSplitterNN().load("522bdd11-d1fa-49dd-9e51-87c529283418")
+id_splitter = IdentifierSplitterNN().load(id_splitter_nn)
 id_splitter.split(identifiers)
 ```
 
 1 model:
 
-- <default> [522bdd11-d1fa-49dd-9e51-87c529283418](/id_splitter_nn/522bdd11-d1fa-49dd-9e51-87c529283418.md)
+* <default> [522bdd11-d1fa-49dd-9e51-87c529283418](/id_splitter_nn/522bdd11-d1fa-49dd-9e51-87c529283418.md)
 
 ## topics
 Topic modeling of Git repositories. All tokens are identifiers extracted from repositories and seen as indicators for topics. They are used to infer the topic(s) of repositories.
@@ -95,6 +94,7 @@ corrector = TyposCorrector().load(typos_correction)
 print("Corrector configuration:\n", corrector.dump())
 ```
 
-1 model:
+2 models:
 
-* <default> [245fae3a-2f87-4990-ab9a-c463393cfe51](/typos_correction/245fae3a-2f87-4990-ab9a-c463393cfe51.md)
+* <default> [16577a2c-7f17-4a6f-a759-92f3a00cf339](/typos_correction/16577a2c-7f17-4a6f-a759-92f3a00cf339.md)
+*  [245fae3a-2f87-4990-ab9a-c463393cfe51](/typos_correction/245fae3a-2f87-4990-ab9a-c463393cfe51.md)
