@@ -15,8 +15,8 @@
             "default": "92609e70-f79c-46b5-8419-55726e873cfc",
             "description": "Source code identifier embeddings, that is, every identifier is represented by a dense vector."
         },
-        "id_splitter_nn": {
-            "code": "from sourced.ml.models.id_splitter import IdentifierSplitterNN\nid_splitter = IdentifierSplitterNN().load(%s)\nid_splitter.split(identifiers)",
+        "id_splitter_bilstm": {
+            "code": "from sourced.ml.models.id_splitter import IdentifierSplitterBiLSTM\nid_splitter = IdentifierSplitterBiLSTM().load(%s)\nid_splitter.split(identifiers)",
             "default": "522bdd11-d1fa-49dd-9e51-87c529283418",
             "description": "Model that contains source code identifier splitter BiLSTM weights."
         },
@@ -256,10 +256,10 @@
                 ]
             }
         },
-        "id_splitter_nn": {
+        "id_splitter_bilstm": {
             "522bdd11-d1fa-49dd-9e51-87c529283418": {
-                "code": "from sourced.ml.models.id_splitter import IdentifierSplitterNN\nid_splitter = IdentifierSplitterNN().load(%s)\nid_splitter.split(identifiers)",
-                "created_at": "2019-04-12 10:59:58",
+                "code": "from sourced.ml.models.id_splitter import IdentifierSplitterBiLSTM\nid_splitter = IdentifierSplitterBiLSTM().load(%s)\nid_splitter.split(identifiers)",
+                "created_at": "2019-05-15 15:22:59",
                 "datasets": [
                     []
                 ],
@@ -333,11 +333,11 @@
                         ],
                         [
                             "grpcio",
-                            "1.19.0"
+                            "1.20.1"
                         ],
                         [
                             "grpcio-tools",
-                            "1.19.0"
+                            "1.20.1"
                         ],
                         [
                             "h5py",
@@ -356,20 +356,20 @@
                             "2.6.0"
                         ],
                         [
+                            "lz4",
+                            "2.1.6"
+                        ],
+                        [
                             "modelforge",
-                            "0.11.1"
+                            "0.12.1"
                         ],
                         [
                             "numpy",
-                            "1.16.2"
-                        ],
-                        [
-                            "pandas",
-                            "0.24.2"
+                            "1.16.3"
                         ],
                         [
                             "pip",
-                            "19.0.3"
+                            "19.1.1"
                         ],
                         [
                             "protobuf",
@@ -378,14 +378,6 @@
                         [
                             "pygtrie",
                             "2.3"
-                        ],
-                        [
-                            "python-dateutil",
-                            "2.8.0"
-                        ],
-                        [
-                            "pytz",
-                            "2019.1"
                         ],
                         [
                             "requests",
@@ -401,27 +393,27 @@
                         ],
                         [
                             "setuptools",
-                            "41.0.0"
+                            "41.0.1"
                         ],
                         [
                             "six",
                             "1.12.0"
                         ],
                         [
-                            "sourced-ml",
-                            "0.8.3"
+                            "sourced-ml-core",
+                            "0.0.1"
                         ],
                         [
                             "spdx",
                             "2.5.0"
                         ],
                         [
-                            "tensorflow-estimator",
-                            "1.13.0"
+                            "tensorflow",
+                            "1.13.1"
                         ],
                         [
-                            "tensorflow-gpu",
-                            "1.13.1"
+                            "tensorflow-estimator",
+                            "1.13.0"
                         ],
                         [
                             "termcolor",
@@ -429,10 +421,10 @@
                         ],
                         [
                             "urllib3",
-                            "1.24.1"
+                            "1.24.3"
                         ]
                     ],
-                    "platform": "Linux-4.15.0-47-generic-x86_64-with-debian-stretch-sid",
+                    "platform": "Linux-4.15.0-48-generic-x86_64-with-debian-stretch-sid",
                     "python": "3.6.0 (default, Jan  7 2019, 11:18:05) [GCC 5.4.0 20160609]"
                 },
                 "extra": {},
@@ -444,9 +436,11 @@
                 "series": "rnn-splitter",
                 "size": "8.7 MB",
                 "tags": [
-                    "identifiers_splitter"
+                    "identifer_splitter",
+                    "token_parser",
+                    "bilstm"
                 ],
-                "url": "https://storage.googleapis.com/models.cdn.sourced.tech/models%2Fid_splitter_nn%2F522bdd11-d1fa-49dd-9e51-87c529283418.asdf",
+                "url": "https://storage.googleapis.com/models.cdn.sourced.tech/models%2Fid_splitter_bilstm%2F522bdd11-d1fa-49dd-9e51-87c529283418.asdf",
                 "vendor": "source{d}",
                 "version": [
                     1,
