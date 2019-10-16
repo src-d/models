@@ -94,7 +94,8 @@ corrector = TyposCorrector().load(typos_correction)
 print("Corrector configuration:\n", corrector.dump())
 ```
 
-2 models:
+3 models:
 
-* <default> [16577a2c-7f17-4a6f-a759-92f3a00cf339](/typos_correction/16577a2c-7f17-4a6f-a759-92f3a00cf339.md)
+*  [16577a2c-7f17-4a6f-a759-92f3a00cf339](/typos_correction/16577a2c-7f17-4a6f-a759-92f3a00cf339.md)
 *  [245fae3a-2f87-4990-ab9a-c463393cfe51](/typos_correction/245fae3a-2f87-4990-ab9a-c463393cfe51.md)
+* <default> [9b82399a-1a4d-48c2-9e53-c4f0be631a45](/typos_correction/9b82399a-1a4d-48c2-9e53-c4f0be631a45.md)
