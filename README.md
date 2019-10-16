@@ -1,6 +1,28 @@
 source{d} MLonCode models
 =========================
 
+## bot-detection
+Model that identifies bots from humans among developer identities.
+
+Example:
+
+```python
+from sklearn.preprocessing import LabelEncoder
+from sourced.ml.models import BotDetection
+from xgboost import XGBClassifier
+
+bot_detection = BotDetection.load(bot-detection)
+xgb_cls = XGBClassifier()
+xgb_cls._Booster = bot_detection_model.booster
+xgb_cls._le = LabelEncoder().fit([False, True])
+print('model configuration: ', xgb_cls)
+print('BPE model vocabulary size: ', len(bot_detection.bpe_model.vocab()))
+```
+
+1 model:
+
+* <default> [94806d1f-1995-4c72-89c9-07681fa9d97d](/bot-detection/94806d1f-1995-4c72-89c9-07681fa9d97d.md)
+
 ## bow
 Weighted bag-of-words, that is, every bag is a feature extracted from source code and associated with a weight obtained by applying TFIDF.
 
